@@ -40,7 +40,6 @@ p {
 	line-height: 21px;
 }
 
-/*The widths are in a percentage!*/
 header {
 	margin: 0 auto;
 	width: 100%;
@@ -65,6 +64,7 @@ header nav {
 	padding: 38px 0;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
 header nav ul {
 	margin: 0;
@@ -78,7 +78,6 @@ header nav ul li {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
 	flex-wrap: row wrap;
 	margin: 0 auto;
 	padding-left: 0;
@@ -88,7 +87,6 @@ header nav ul li a{
 	color:#77a466;
 }
 
-/*The widths are in a percentage!*/
 .top-section,
 .bottom-section {
 	margin: 0 auto;
@@ -141,15 +139,11 @@ header nav ul li a{
 	width: 100%;
 }
 
-.section-two {
-
-}
-
-
 .menu {
 	list-style: none;
 	padding: 0;
 }
+
 .menu li {
 	padding: 10px 0;
 	color:#77a466;
@@ -166,18 +160,82 @@ header nav ul li a{
 	line-height: 1.5em;
 }
 
-/*The widths are in a percentage!*/
 footer {
-	border-top: 3px solid #eee;
+	border-top: 1px solid #eee;
 	margin: 0 auto;
 	text-align: center;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 100%;
+	padding-top: 10px;
 }
+
 footer span {
 	font-family: 'Galada', cursive;
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.88em;
+}
+
+@media all and (min-width:768px) {
+	/*****tablet styles*****/
+	.bottom-section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		width: 100%;
+		box-sizing: border-box;
+		border-bottom: 1px solid #eee;
+	}
+
+	.section-one,
+	.section-two,
+	.section-three {
+		display: flex;
+		width: 33.3%;
+		height: 325px;
+		box-sizing: border-box;
+		padding: 10px 25px 25px 25px;
+	}
+
+	.section-one {
+		padding-left: 0px;
+	}
+
+	.section-two {
+		border-left: 1px solid #eee;
+		border-right: 1px solid #eee;
+	}
+	
+	footer {
+		border: none;
+	}
+}
+
+@media all and (min-width:1200px) {
+	/*****desktop styles*****/
+	header{
+		display: flex;
+		flex-flow: row nowrap;
+	}
+
+	header h1 {
+		display: flex;
+		justify-content: flex-start;
+		width: 50%;
+		border: none;
+	}
+
+	header nav {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: row;
+		width: 50%;
+	}
+
+	header nav ul li {
+		display: inline;
+	}
 }
